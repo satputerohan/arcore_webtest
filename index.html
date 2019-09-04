@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no,
-  minimum-scale=1.0, maximum-scale=1.0">
+
 <head>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
     </script>
@@ -16,13 +12,21 @@
 
     <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
     <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+  <style>
+    .mv-container{
+      height:100%;
+      width:100%;
+    }
+    .mv-container model-viewer{
+      height:100%;
+      width:100%;
+    }
+  </style>
 </head>
 <body>
 <!--    <h2 align="center">AR Embed Test</h2>-->
-    <p style="height:300px; width=300px;" align="center">
+    <p class="mv-container">
         <model-viewer src="assets/Rosetta-Stone.glb" ar camera-controls alt="A 3D model of the Rosetta Stone" ios-src="assets/Rosetta-Stone.usdz" quick-look-browsers="safari chrome"></model-viewer>
     </p> 
 </body>
-
-</html>
 
